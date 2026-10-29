@@ -162,7 +162,7 @@ export const builtFor = [
 ];
 
 export const specs = [
-  { label: "Capacity", value: "10 fl oz (296 mL)" },
+  { label: "Capacity", value: "12 fl oz (355 mL)" },
   { label: "Height", value: '8.25 in (21 cm)' },
   { label: "Diameter", value: '2.4 in (6.1 cm)' },
   { label: "Weight, filled", value: "10.5 oz (298 g)" },
