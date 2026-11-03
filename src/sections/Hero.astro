@@ -2,7 +2,6 @@
 import CtaButton from "../components/CtaButton.astro";
 import ImageSlot from "../components/ImageSlot.astro";
 import Icon from "../components/Icon.astro";
-import Mountains from "../components/Mountains.astro";
 import { hero, motto } from "../data/product";
 ---
 
@@ -16,7 +15,16 @@ import { hero, motto } from "../data/product";
   </div>
 
   <!-- Peaks and pines from the badge logo, fading in toward the bottom -->
-  <Mountains class="-z-10 h-40 sm:h-auto opacity-80 [mask-image:linear-gradient(to_top,black_55%,transparent)]" />
+  <img
+    src="/images/mountain-banner.webp"
+    alt=""
+    width="874"
+    height="118"
+    loading="lazy"
+    decoding="async"
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-28 w-full object-cover object-center sm:h-auto [mask-image:linear-gradient(to_bottom,transparent,black_45%)]"
+  />
 
   <div class="shell grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
     <!-- Copy column -->
