@@ -1,7 +1,8 @@
 ---
 /**
- * Wordmark. The three-stroke splash echoes the mark printed on the bottle.
- * TODO(assets): swap for the client's real vector logo when supplied.
+ * Wordmark. Heavy slanted caps with a blue bar underneath, echoing the
+ * SQUEEJIT banner on the client's badge logo. The full badge artwork lives
+ * at /images/logo-badge.webp for places that have room for it.
  */
 interface Props {
   class?: string;
@@ -9,16 +10,9 @@ interface Props {
 const { class: className = "" } = Astro.props;
 ---
 
-<span class:list={["inline-flex items-center gap-2", className]}>
-  <svg class="h-6 w-6 shrink-0 text-brand-500" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M3 15c3.5-1.8 6.2-2.4 9.5-2.2M5 19.5c3-1.5 5.3-2 8-1.9M6.5 10c3.2-2 5.8-2.8 9-2.9"
-      stroke="currentColor"
-      stroke-width="2.4"
-      stroke-linecap="round"></path>
-  </svg>
-
-  <span class="font-display text-2xl font-extrabold uppercase tracking-tight text-white">
+<span class:list={["inline-flex flex-col leading-none", className]}>
+  <span class="inline-block -skew-x-12 font-display text-3xl font-extrabold uppercase tracking-tight text-white">
     Squeejit
   </span>
+  <span class="mt-0.5 block h-[3px] w-full -skew-x-12 bg-brand-500" aria-hidden="true"></span>
 </span>

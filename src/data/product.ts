@@ -8,7 +8,7 @@
 
 export const site = {
   name: "Squeejit",
-  tagline: "Trailside windshield rescue",
+  tagline: "Off highway vehicle glass window cleaner",
   description:
     "One bottle. Scrubber, squeegee and cleaner in your hand, so you can clear a mud-blind windshield in under a minute, anywhere the trail takes you.",
   // TODO(client): confirm before launch
@@ -30,7 +30,7 @@ export const credit = {
 };
 
 export const hero = {
-  eyebrow: "Built for the trail",
+  eyebrow: "Off highway vehicle glass window cleaner",
   headlinePre: "Mud on,",
   headlineSlash: "mud off.",
   sub:
@@ -44,6 +44,9 @@ export const hero = {
     "Fits any door pocket",
   ],
 };
+
+/** The three-beat line printed on the client's badge logo. */
+export const motto = ["Squirt it", "Scrub it", "Squeejit"];
 
 export const problem = {
   eyebrow: "The problem",
@@ -69,9 +72,9 @@ export const steps = [
   },
   {
     n: "03",
-    title: "Squeegee",
+    title: "Squeejit",
     body:
-      "One pass with the integrated blade pulls the slurry off clean. No towel, no streaks, no waiting for it to dry in the sun.",
+      "That's the name and the finish. One pass with the integrated blade pulls the slurry off clean. No towel, no streaks, no waiting for it to dry in the sun.",
   },
 ];
 

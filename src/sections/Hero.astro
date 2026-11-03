@@ -1,8 +1,7 @@
 ---
 import CtaButton from "../components/CtaButton.astro";
-import ImageSlot from "../components/ImageSlot.astro";
 import Icon from "../components/Icon.astro";
-import { hero } from "../data/product";
+import { hero, motto } from "../data/product";
 ---
 
 <section id="top" class="relative isolate overflow-hidden pt-20">
@@ -55,18 +54,19 @@ import { hero } from "../data/product";
       >
       </div>
 
-      <ImageSlot
-        src={undefined}
-        loading="eager"
-        ratio="4 / 5"
-        alt="Squeejit bottle held against a mud-covered UTV windshield"
-        note="HERO SHOT. The bottle in a gloved hand, mid-squeegee, cutting a clean stripe through a muddy UTV windshield. Shoot late afternoon, dust in the air. Vertical crop."
-        class="w-full"
+      {/* Client-supplied badge logo. Swap for a bottle photo later if wanted. */}
+      <img
+        src="/images/logo-badge.webp"
+        alt="Squeejit badge: a side-by-side UTV tearing through a mountain stream. Off highway vehicle glass window cleaner. Squirt it, scrub it, Squeejit."
+        width="686"
+        height="1010"
+        fetchpriority="high"
+        class="mx-auto h-auto w-full max-w-sm drop-shadow-[0_24px_40px_rgb(14_165_233_/_0.25)] lg:max-w-md"
       />
 
       <!-- Floating stat card -->
       <div
-        class="absolute -bottom-6 left-4 border border-ink-700 bg-ink-900/95 px-5 py-4 shadow-[var(--shadow-lift)] backdrop-blur sm:left-8"
+        class="absolute -bottom-6 left-0 border border-ink-700 bg-ink-900/95 px-5 py-4 shadow-[var(--shadow-lift)] backdrop-blur sm:left-8"
       >
         <p class="font-display text-4xl leading-none text-brand-400">60s</p>
         <p class="mt-1 text-xs uppercase tracking-[0.18em] text-steel-400">
@@ -76,6 +76,24 @@ import { hero } from "../data/product";
     </div>
   </div>
 
-  <!-- Hazard rule closing the hero -->
-  <div class="texture-hazard h-1.5 w-full opacity-70"></div>
+  <!-- Motto strip from the badge, then a racing-stripe rule closing the hero -->
+  <ul
+    class="shell flex flex-wrap items-center justify-center gap-x-0 pb-10 font-display text-2xl font-bold uppercase italic tracking-wide text-white sm:text-3xl"
+    aria-label="Squirt it, scrub it, Squeejit"
+  >
+    {
+      motto.map((word, i) => (
+        <li
+          class:list={[
+            "px-5 sm:px-8",
+            i > 0 && "border-l-2 border-brand-500",
+            i === motto.length - 1 && "text-brand-400",
+          ]}
+        >
+          {word}
+        </li>
+      ))
+    }
+  </ul>
+  <div class="texture-stripe h-1.5 w-full"></div>
 </section>
