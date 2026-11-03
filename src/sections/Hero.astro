@@ -5,7 +5,7 @@ import Icon from "../components/Icon.astro";
 import { hero, motto } from "../data/product";
 ---
 
-<section id="top" class="relative isolate overflow-hidden pt-20">
+<section id="top" class="hero-short relative isolate flex min-h-svh flex-col overflow-hidden pt-20">
   <!-- Background stack: base gradient, topo texture, blue bloom -->
   <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink-900 via-ink-950 to-ink-950"></div>
   <div class="texture-topo absolute inset-0 -z-10 opacity-60"></div>
@@ -23,10 +23,10 @@ import { hero, motto } from "../data/product";
     loading="lazy"
     decoding="async"
     aria-hidden="true"
-    class="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-28 w-full object-cover object-center sm:h-auto [mask-image:linear-gradient(to_bottom,transparent,black_45%)]"
+    class="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-28 w-full object-cover object-center sm:h-32 lg:h-40 [mask-image:linear-gradient(to_bottom,transparent,black_45%)]"
   />
 
-  <div class="shell grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
+  <div class="shell grid flex-1 items-center gap-12 py-10 lg:grid-cols-2 lg:gap-16 lg:py-6">
     <!-- Copy column -->
     <div class="reveal is-visible">
       <p class="eyebrow">{hero.eyebrow}</p>
@@ -36,18 +36,18 @@ import { hero, motto } from "../data/product";
         <span class="slash mt-2 whitespace-nowrap"><span>{hero.headlineSlash}</span></span>
       </h1>
 
-      <p class="mt-7 max-w-xl text-lg leading-relaxed text-steel-300 sm:text-xl">
+      <p class="hero-sub mt-7 max-w-xl text-lg leading-relaxed text-steel-300 sm:text-xl">
         {hero.sub}
       </p>
 
-      <div class="mt-9 flex flex-wrap items-center gap-4">
+      <div class="hero-cta mt-9 flex flex-wrap items-center gap-4">
         <CtaButton href="#buy" size="lg">{hero.primaryCta}</CtaButton>
         <CtaButton href="#how-it-works" size="lg" variant="ghost">
           {hero.secondaryCta}
         </CtaButton>
       </div>
 
-      <ul class="mt-9 flex flex-wrap gap-x-7 gap-y-3">
+      <ul class="hero-trust mt-9 flex flex-wrap gap-x-7 gap-y-3">
         {
           hero.trust.map((item) => (
             <li class="flex items-center gap-2 text-sm text-steel-400">
@@ -60,21 +60,27 @@ import { hero, motto } from "../data/product";
     </div>
 
     <!-- Product column -->
-    <div class="reveal is-visible relative">
+    <!-- On desktop the photo slot is sized from the viewport height, so the
+         hero always leaves room for the motto and mountains below it. -->
+    <div
+      class="reveal is-visible relative lg:justify-self-end lg:[--slot-h:clamp(20rem,calc(100svh-27rem),46rem)]"
+    >
       <!-- Angled accent panel behind the product shot -->
       <div
         class="absolute -inset-3 -z-10 bg-gradient-to-br from-brand-500/50 via-brand-700/20 to-transparent [clip-path:polygon(6%_0,100%_4%,94%_100%,0_96%)] sm:-inset-5"
       >
       </div>
 
+      <div class="lg:h-[var(--slot-h)] lg:w-[calc(var(--slot-h)*0.8)]">
       <ImageSlot
         src={undefined}
         loading="eager"
         ratio="4 / 5"
         alt="Squeejit bottle held against a mud-covered UTV windshield"
         note="HERO SHOT. The bottle in a gloved hand, mid-squeegee, cutting a clean stripe through a muddy UTV windshield. Shoot late afternoon, dust in the air. Vertical crop."
-        class="w-full"
+        class="h-full w-full"
       />
+      </div>
 
       <!-- Floating stat card -->
       <div
@@ -90,7 +96,7 @@ import { hero, motto } from "../data/product";
 
   <!-- Motto strip from the badge, then a racing-stripe rule closing the hero -->
   <ul
-    class="shell flex flex-wrap items-center justify-center gap-x-0 pb-32 pt-6 font-display sm:pb-52 text-2xl font-bold uppercase italic tracking-wide text-white sm:text-3xl"
+    class="hero-motto shell flex flex-wrap items-center justify-center gap-x-0 pb-28 pt-6 font-display sm:pb-32 lg:pb-40 text-2xl font-bold uppercase italic tracking-wide text-white sm:text-3xl"
     aria-label="Squirt it, scrub it, Squeejit"
   >
     {
