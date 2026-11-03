@@ -1,0 +1,40 @@
+---
+/**
+ * Water-splash swoosh redrawn from the bottom of the client's badge logo.
+ * Used as a closing flourish. Decorative only.
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+---
+
+<svg
+  class:list={["block h-auto w-full", className]}
+  viewBox="0 0 1200 170"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path
+    fill="var(--color-brand-500)"
+    d="M0 168C240 70 620 22 1200 132 700 84 330 100 0 168Z"
+  ></path>
+  <path
+    fill="var(--color-splash-50)"
+    d="M70 128C340 56 720 46 1150 104 740 70 390 84 70 128Z"
+  ></path>
+  <path
+    fill="var(--color-brand-400)"
+    d="M240 168C520 118 830 122 1180 160 860 140 520 148 240 168Z"
+  ></path>
+  <!-- Droplets thrown off the crest -->
+  <g fill="var(--color-brand-400)">
+    <ellipse cx="110" cy="86" rx="7" ry="11" transform="rotate(-30 110 86)"></ellipse>
+    <ellipse cx="160" cy="62" rx="5" ry="8" transform="rotate(-35 160 62)"></ellipse>
+    <circle cx="210" cy="96" r="4"></circle>
+    <ellipse cx="1060" cy="62" rx="7" ry="11" transform="rotate(30 1060 62)"></ellipse>
+    <ellipse cx="1110" cy="84" rx="5" ry="8" transform="rotate(35 1110 84)"></ellipse>
+    <circle cx="1020" cy="86" r="4"></circle>
+  </g>
+</svg>

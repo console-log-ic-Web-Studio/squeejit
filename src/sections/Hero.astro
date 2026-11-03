@@ -1,5 +1,6 @@
 ---
 import CtaButton from "../components/CtaButton.astro";
+import ImageSlot from "../components/ImageSlot.astro";
 import Icon from "../components/Icon.astro";
 import { hero, motto } from "../data/product";
 ---
@@ -12,6 +13,18 @@ import { hero, motto } from "../data/product";
     class="absolute -right-1/4 top-0 -z-10 h-[70vh] w-[70vw] rounded-full bg-brand-600/20 blur-[120px]"
   >
   </div>
+
+  <!-- Peaks and pines from the badge logo, fading in toward the bottom -->
+  <img
+    src="/images/mountain-banner.webp"
+    alt=""
+    width="874"
+    height="118"
+    loading="lazy"
+    decoding="async"
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-28 w-full object-cover object-center sm:h-auto [mask-image:linear-gradient(to_bottom,transparent,black_45%)]"
+  />
 
   <div class="shell grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
     <!-- Copy column -->
@@ -54,14 +67,13 @@ import { hero, motto } from "../data/product";
       >
       </div>
 
-      {/* Client-supplied badge logo. Swap for a bottle photo later if wanted. */}
-      <img
-        src="/images/logo-badge.webp"
-        alt="Squeejit badge: a side-by-side UTV tearing through a mountain stream. Off highway vehicle glass window cleaner. Squirt it, scrub it, Squeejit."
-        width="1206"
-        height="1773"
-        fetchpriority="high"
-        class="mx-auto h-auto w-full max-w-sm drop-shadow-[0_24px_40px_rgb(14_165_233_/_0.25)] lg:max-w-md"
+      <ImageSlot
+        src={undefined}
+        loading="eager"
+        ratio="4 / 5"
+        alt="Squeejit bottle held against a mud-covered UTV windshield"
+        note="HERO SHOT. The bottle in a gloved hand, mid-squeegee, cutting a clean stripe through a muddy UTV windshield. Shoot late afternoon, dust in the air. Vertical crop."
+        class="w-full"
       />
 
       <!-- Floating stat card -->
@@ -78,7 +90,7 @@ import { hero, motto } from "../data/product";
 
   <!-- Motto strip from the badge, then a racing-stripe rule closing the hero -->
   <ul
-    class="shell flex flex-wrap items-center justify-center gap-x-0 pb-10 font-display text-2xl font-bold uppercase italic tracking-wide text-white sm:text-3xl"
+    class="shell flex flex-wrap items-center justify-center gap-x-0 pb-32 pt-6 font-display sm:pb-52 text-2xl font-bold uppercase italic tracking-wide text-white sm:text-3xl"
     aria-label="Squirt it, scrub it, Squeejit"
   >
     {
