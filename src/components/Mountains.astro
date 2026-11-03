@@ -1,0 +1,87 @@
+---
+/**
+ * Snow-capped peaks plus a pine tree line, redrawn as vector from the
+ * client's badge logo. Decorative only. Sits absolutely at the bottom of
+ * its parent: the parent needs `relative` and the content needs to sit
+ * above it. Colors come from the theme tokens in global.css.
+ */
+interface Props {
+  class?: string;
+  /** Hide the tree line and show only the peaks. */
+  trees?: boolean;
+}
+const { class: className = "", trees = true } = Astro.props;
+
+// Deterministic "random" so the tree line is identical on every build.
+let seed = 7;
+const rand = () => {
+  seed = (seed * 16807) % 2147483647;
+  return seed / 2147483647;
+};
+
+// Taller and denser at the edges, sparse in the middle, like the badge.
+const pines: { x: number; h: number }[] = [];
+for (let x = -10; x < 1450; x += 20 + rand() * 18) {
+  const edge = Math.abs(x - 720) / 720; // 0 center, 1 edges
+  const h = 55 + edge ** 1.6 * 110 + rand() * 40;
+  if (edge < 0.35 && rand() < 0.65) continue;
+  pines.push({ x, h });
+}
+---
+
+<svg
+  class:list={["pointer-events-none absolute inset-x-0 bottom-0 w-full", className]}
+  viewBox="0 0 1440 400"
+  preserveAspectRatio="xMidYMax slice"
+  aria-hidden="true"
+  focusable="false"
+>
+  <defs>
+    <symbol id="pine" viewBox="0 0 40 100">
+      <path d="M20 0 30 28H25L34 52H28L38 80H22V100H18V80H2L12 52H6L15 28H10Z"></path>
+    </symbol>
+  </defs>
+
+  <!-- Far range -->
+  <path
+    fill="var(--color-brand-600)"
+    opacity="0.4"
+    d="M0 400V260L120 190 200 230 330 130 440 220 520 180 640 250 760 150 880 230 1000 170 1120 240 1240 160 1340 220 1440 190V400Z"
+  ></path>
+  <path
+    fill="var(--color-brand-300)"
+    opacity="0.2"
+    d="M330 130 379 170 440 220 400 240 360 200ZM760 150 820 190 880 230 840 250 790 200ZM1240 160 1307 200 1340 220 1300 240 1260 200Z"
+  ></path>
+  <!-- Snow caps -->
+  <g fill="var(--color-splash-50)" opacity="0.9">
+    <path d="M330 130 379 170 360 164 345 182 330 166 312 184 296 160 278 170Z"></path>
+    <path d="M760 150 820 190 802 184 786 204 770 186 750 206 736 184 712 190Z"></path>
+    <path d="M1240 160 1307 200 1288 194 1270 214 1252 196 1230 216 1212 192 1180 200Z"></path>
+    <path d="M120 190 170 215 150 210 135 224 118 212 98 226 77 215Z"></path>
+  </g>
+
+  <!-- Near foothills -->
+  <path
+    fill="var(--color-brand-700)"
+    opacity="0.75"
+    d="M0 400V300L90 260 210 310 330 270 460 320 600 285 720 330 860 290 1000 325 1130 280 1260 320 1360 285 1440 310V400Z"
+  ></path>
+
+  {
+    trees && (
+      <g fill="var(--color-ink-950)">
+        {pines.map((p) => (
+          <use
+            href="#pine"
+            x={p.x}
+            y={400 - p.h}
+            width={p.h * 0.4}
+            height={p.h}
+          />
+        ))}
+        <rect x="0" y="385" width="1440" height="15" />
+      </g>
+    )
+  }
+</svg>

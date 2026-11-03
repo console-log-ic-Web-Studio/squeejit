@@ -1,5 +1,6 @@
 ---
 import CtaButton from "../components/CtaButton.astro";
+import Wave from "../components/Wave.astro";
 import { finalCta } from "../data/product";
 ---
 
@@ -33,4 +34,6 @@ import { finalCta } from "../data/product";
       <CtaButton href="#buy" size="lg">{finalCta.cta}</CtaButton>
     </div>
   </div>
+
+  <Wave class="relative" />
 </section>

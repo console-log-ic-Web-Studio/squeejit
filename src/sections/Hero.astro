@@ -1,6 +1,7 @@
 ---
 import CtaButton from "../components/CtaButton.astro";
 import Icon from "../components/Icon.astro";
+import Mountains from "../components/Mountains.astro";
 import { hero, motto } from "../data/product";
 ---
 
@@ -12,6 +13,9 @@ import { hero, motto } from "../data/product";
     class="absolute -right-1/4 top-0 -z-10 h-[70vh] w-[70vw] rounded-full bg-brand-600/20 blur-[120px]"
   >
   </div>
+
+  <!-- Peaks and pines from the badge logo, fading in toward the bottom -->
+  <Mountains class="-z-10 h-40 sm:h-auto opacity-80 [mask-image:linear-gradient(to_top,black_55%,transparent)]" />
 
   <div class="shell grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
     <!-- Copy column -->
@@ -78,7 +82,7 @@ import { hero, motto } from "../data/product";
 
   <!-- Motto strip from the badge, then a racing-stripe rule closing the hero -->
   <ul
-    class="shell flex flex-wrap items-center justify-center gap-x-0 pb-10 font-display text-2xl font-bold uppercase italic tracking-wide text-white sm:text-3xl"
+    class="shell flex flex-wrap items-center justify-center gap-x-0 pb-32 pt-6 font-display sm:pb-52 text-2xl font-bold uppercase italic tracking-wide text-white sm:text-3xl"
     aria-label="Squirt it, scrub it, Squeejit"
   >
     {
