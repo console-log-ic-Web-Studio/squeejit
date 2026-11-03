@@ -1,7 +1,7 @@
 ---
 interface Props {
   href?: string;
-  variant?: "primary" | "ghost" | "hazard";
+  variant?: "primary" | "ghost" | "light";
   size?: "md" | "lg";
   class?: string;
   /** Renders a <button> instead of an <a>. Used by the placeholder buy CTAs. */
@@ -27,8 +27,8 @@ const sizes = {
 const variants = {
   primary:
     "bg-brand-500 text-white shadow-[var(--shadow-glow)] hover:bg-brand-400 hover:-translate-y-0.5 active:translate-y-0",
-  hazard:
-    "bg-hazard-500 text-ink-950 hover:bg-hazard-400 hover:-translate-y-0.5 active:translate-y-0",
+  light:
+    "bg-splash-50 text-ink-950 hover:bg-white hover:-translate-y-0.5 active:translate-y-0",
   ghost:
     "border-2 border-ink-600 bg-ink-900/60 text-steel-200 backdrop-blur hover:border-brand-500 hover:text-white",
 };

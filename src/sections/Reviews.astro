@@ -20,7 +20,7 @@ import { reviews } from "../data/product";
             class="reveal flex flex-col border border-ink-700 bg-ink-900 p-8"
             style={`transition-delay: ${i * 80}ms`}
           >
-            <div class="flex gap-1 text-hazard-400" aria-label={`${review.rating} out of 5 stars`}>
+            <div class="flex gap-1 text-brand-400" aria-label={`${review.rating} out of 5 stars`}>
               {Array.from({ length: review.rating }).map(() => (
                 <Icon name="star" class="h-5 w-5" />
               ))}

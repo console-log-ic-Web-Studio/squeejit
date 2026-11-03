@@ -24,17 +24,15 @@
   --color-steel-300: #aebcc9;
   --color-steel-200: #d2dbe4;
 
-  /* Brand blue, pulled from the Squeejit bottle label */
-  --color-brand-300: #7cc6ff;
-  --color-brand-400: #38a3ff;
-  --color-brand-500: #0b84ef;
-  --color-brand-600: #0566c2;
-  --color-brand-700: #044c93;
+  /* Brand blue, sampled from the client's badge logo (#0ea4e8 / #01a6f5) */
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
 
-  /* Hazard orange: secondary punch, used sparingly for emphasis */
-  --color-hazard-400: #ff9147;
-  --color-hazard-500: #ff6a13;
-  --color-hazard-600: #d94f00;
+  /* White: the logo's second accent, used for the wordmark and stripes */
+  --color-splash-50: #f4fbff;
 
   /* Trail tan: dirt/mud accents in textures and rules */
   --color-mud-500: #8a7550;
@@ -174,14 +172,16 @@
   );
 }
 
-/* Diagonal hazard stripes, used on thin divider bars. */
-@utility texture-hazard {
+/* Diagonal blue/white racing stripes, used on thin divider bars. */
+@utility texture-stripe {
   background-image: repeating-linear-gradient(
     -45deg,
-    var(--color-hazard-500) 0,
-    var(--color-hazard-500) 10px,
-    transparent 10px,
-    transparent 20px
+    var(--color-brand-500) 0,
+    var(--color-brand-500) 14px,
+    var(--color-splash-50) 14px,
+    var(--color-splash-50) 20px,
+    transparent 20px,
+    transparent 28px
   );
 }
 
