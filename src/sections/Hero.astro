@@ -1,5 +1,6 @@
 ---
 import CtaButton from "../components/CtaButton.astro";
+import ImageSlot from "../components/ImageSlot.astro";
 import Icon from "../components/Icon.astro";
 import Mountains from "../components/Mountains.astro";
 import { hero, motto } from "../data/product";
@@ -23,7 +24,7 @@ import { hero, motto } from "../data/product";
       <p class="eyebrow">{hero.eyebrow}</p>
 
       <h1 class="mt-6 text-5xl leading-[0.9] sm:text-6xl lg:text-7xl xl:text-8xl">
-        {hero.headlinePre}<br />
+        <span class="badge-caps inline-block pl-2">{hero.headlinePre}</span><br />
         <span class="slash mt-2 whitespace-nowrap"><span>{hero.headlineSlash}</span></span>
       </h1>
 
@@ -58,14 +59,13 @@ import { hero, motto } from "../data/product";
       >
       </div>
 
-      {/* Client-supplied badge logo. Swap for a bottle photo later if wanted. */}
-      <img
-        src="/images/logo-badge.webp"
-        alt="Squeejit badge: a side-by-side UTV tearing through a mountain stream. Off highway vehicle glass window cleaner. Squirt it, scrub it, Squeejit."
-        width="1206"
-        height="1773"
-        fetchpriority="high"
-        class="mx-auto h-auto w-full max-w-sm drop-shadow-[0_24px_40px_rgb(14_165_233_/_0.25)] lg:max-w-md"
+      <ImageSlot
+        src={undefined}
+        loading="eager"
+        ratio="4 / 5"
+        alt="Squeejit bottle held against a mud-covered UTV windshield"
+        note="HERO SHOT. The bottle in a gloved hand, mid-squeegee, cutting a clean stripe through a muddy UTV windshield. Shoot late afternoon, dust in the air. Vertical crop."
+        class="w-full"
       />
 
       <!-- Floating stat card -->

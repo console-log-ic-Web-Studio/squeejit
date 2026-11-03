@@ -40,6 +40,17 @@ for (let x = -10; x < 1450; x += 20 + rand() * 18) {
     <symbol id="pine" viewBox="0 0 40 100">
       <path d="M20 0 30 28H25L34 52H28L38 80H22V100H18V80H2L12 52H6L15 28H10Z"></path>
     </symbol>
+  <g id="snowcap">
+    <path
+      fill="var(--color-splash-50)"
+      d="M0 0 24 20 20 26 44 46 34 48 54 68 40 60 30 54 34 82 24 62 16 76 9 58 4 94-4 60-14 82-19 58-34 64-46 78-40 50-62 62-50 40-44 36-30 32-26 22-12 12Z"
+    ></path>
+    <path
+      fill="var(--color-brand-300)"
+      opacity="0.7"
+      d="M0 0 4 94-4 60-14 82-19 58-34 64-46 78-40 50-62 62-50 40-44 36-30 32-26 22-12 12Z"
+    ></path>
+  </g>
   </defs>
 
   <!-- Far range -->
@@ -53,13 +64,14 @@ for (let x = -10; x < 1450; x += 20 + rand() * 18) {
     opacity="0.2"
     d="M330 130 379 170 440 220 400 240 360 200ZM760 150 820 190 880 230 840 250 790 200ZM1240 160 1307 200 1340 220 1300 240 1260 200Z"
   ></path>
-  <!-- Snow caps -->
-  <g fill="var(--color-splash-50)" opacity="0.9">
-    <path d="M330 130 379 170 360 164 345 182 330 166 312 184 296 160 278 170Z"></path>
-    <path d="M760 150 820 190 802 184 786 204 770 186 750 206 736 184 712 190Z"></path>
-    <path d="M1240 160 1307 200 1288 194 1270 214 1252 196 1230 216 1212 192 1180 200Z"></path>
-    <path d="M120 190 170 215 150 210 135 224 118 212 98 226 77 215Z"></path>
-  </g>
+  <!-- Snow: a white mass from the summit with long tongues down the ridges
+       and a light-blue shaded side, after the peaks on the badge. Drawn once
+       with the apex at 0,0 and reused. -->
+  <use href="#snowcap" transform="translate(330 130) scale(1.35)"></use>
+  <use href="#snowcap" transform="translate(760 150) scale(-1.2 1.2)"></use>
+  <use href="#snowcap" transform="translate(1240 160) scale(1.1)"></use>
+  <use href="#snowcap" transform="translate(120 190) scale(-0.8 0.8)"></use>
+  <use href="#snowcap" transform="translate(1000 170) scale(0.65)"></use>
 
   <!-- Near foothills -->
   <path
