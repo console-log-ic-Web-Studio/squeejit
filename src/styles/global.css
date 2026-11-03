@@ -150,6 +150,17 @@
   }
 }
 
+/* Short desktop screens (laptops): tighten the hero so the motto and the
+   mountain banner still land inside the first screen. */
+@media (min-width: 1024px) and (max-height: 900px) {
+  .hero-short h1 { margin-top: 1rem; font-size: 3.75rem; }
+  .hero-short .hero-sub { margin-top: 1.25rem; font-size: 1.125rem; }
+  .hero-short .hero-cta { margin-top: 1.5rem; }
+  .hero-short .hero-cta a { padding-block: 0.75rem; font-size: 1.125rem; }
+  .hero-short .hero-trust { margin-top: 1.25rem; }
+  .hero-short .hero-motto { padding-top: 0.5rem; padding-bottom: 8rem; font-size: 1.5rem; }
+}
+
 /* ------------------------------------------------------------------
    Textures, layered as background images so no asset files are needed
    ------------------------------------------------------------------ */
