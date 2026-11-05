@@ -9,15 +9,15 @@ import { builtFor } from "../data/product";
 >
   <div class="shell">
     <SectionHeading
-      eyebrow="Built for"
-      heading="If it has glass and sees dirt"
-      body="It started as a UTV tool. It didn't stay one."
+      eyebrow={builtFor.eyebrow}
+      heading={builtFor.heading}
+      body={builtFor.body}
       align="center"
     />
 
     <ul class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {
-        builtFor.map((item, i) => (
+        builtFor.items.map((item, i) => (
           <li
             class="reveal group relative flex items-center gap-4 overflow-hidden border-l-2 border-ink-700 bg-ink-900 py-5 pl-6 pr-5 transition-all duration-300 hover:border-brand-500 hover:bg-ink-850"
             style={`transition-delay: ${i * 50}ms`}

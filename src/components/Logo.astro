@@ -1,7 +1,8 @@
 ---
 /**
- * Wordmark. Heavy slanted caps with a blue bar underneath, echoing the
- * SQUEEJIT banner on the client's badge logo. The full badge artwork lives
+ * Wordmark. Heavy italic caps (Exo 2 Black Italic, the closest free match to
+ * the badge lettering) with a blue bar underneath, echoing the SQUEEJIT
+ * banner on the client's badge logo. The full badge artwork lives
  * at /images/logo-badge.webp for places that have room for it.
  */
 interface Props {
@@ -11,7 +12,7 @@ const { class: className = "" } = Astro.props;
 ---
 
 <span class:list={["inline-flex flex-col leading-none", className]}>
-  <span class="inline-block -skew-x-12 font-display text-3xl font-extrabold uppercase tracking-tight text-white">
+  <span class="inline-block font-[family-name:var(--font-wordmark)] text-3xl font-black italic uppercase tracking-tight text-white">
     Squeejit
   </span>
   <span class="mt-0.5 block h-[3px] w-full -skew-x-12 bg-brand-500" aria-hidden="true"></span>

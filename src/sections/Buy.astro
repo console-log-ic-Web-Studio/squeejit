@@ -1,7 +1,7 @@
 ---
 import SectionHeading from "../components/SectionHeading.astro";
 import Icon from "../components/Icon.astro";
-import { buy } from "../data/product";
+import { buy, site } from "../data/product";
 ---
 
 <section id="buy" class="relative overflow-hidden bg-ink-900 py-20 lg:py-28">
@@ -35,11 +35,14 @@ import { buy } from "../data/product";
             <p class="mt-1.5 text-steel-400">{option.blurb}</p>
 
             <p class="mt-6 flex items-baseline gap-3">
-              <span class="font-display text-5xl font-extrabold leading-none text-white">
-                {option.price}
-              </span>
-              {option.compareAt && (
-                <span class="text-lg text-steel-500 line-through">{option.compareAt}</span>
+              {option.price ? (
+                <span class="font-display text-5xl font-extrabold leading-none text-white">
+                  {option.price}
+                </span>
+              ) : (
+                <span class="font-display text-3xl font-bold uppercase leading-none text-steel-300">
+                  Pricing coming soon
+                </span>
               )}
             </p>
 
@@ -53,29 +56,22 @@ import { buy } from "../data/product";
             </ul>
 
             {/*
-              PLACEHOLDER CHECKOUT.
-              TODO(commerce): wire to the chosen platform. For Shopify, swap
-              this for a buy-button embed keyed to the variant ID. For Stripe,
-              make it an <a> to the payment link. Until then it is a disabled
-              button so nobody mistakes the page for a live store.
+              No online checkout yet: the plan is local stores and trading
+              posts first, Amazon later. Until then this is a mailto link.
+              TODO(commerce): swap for the real buy link once one exists.
             */}
-            <button
-              type="button"
-              disabled
+            <a
+              href={`mailto:${site.email}?subject=${encodeURIComponent(`Squeejit: ${option.name}`)}`}
               data-sku={option.id}
               class:list={[
-                "mt-8 w-full cursor-not-allowed px-6 py-4 font-display text-lg font-bold uppercase tracking-wider transition [clip-path:polygon(0.75rem_0,100%_0,100%_calc(100%-0.75rem),calc(100%-0.75rem)_100%,0_100%,0_0.75rem)]",
+                "mt-8 block w-full px-6 py-4 text-center font-display text-lg font-bold uppercase tracking-wider transition [clip-path:polygon(0.75rem_0,100%_0,100%_calc(100%-0.75rem),calc(100%-0.75rem)_100%,0_100%,0_0.75rem)]",
                 option.featured
-                  ? "bg-brand-500 text-white opacity-70"
-                  : "border-2 border-ink-600 text-steel-300 opacity-70",
+                  ? "bg-brand-500 text-white hover:bg-brand-400"
+                  : "border-2 border-ink-600 text-steel-200 hover:border-brand-500 hover:text-white",
               ]}
             >
-              Add to cart
-            </button>
-
-            <p class="mt-2 text-center text-xs uppercase tracking-[0.16em] text-steel-500">
-              Checkout not yet connected
-            </p>
+              Ask about availability
+            </a>
           </li>
         ))
       }
