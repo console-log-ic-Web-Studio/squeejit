@@ -225,7 +225,7 @@ export const faq = [
   },
   {
     q: "How many cleanings do I get per bottle?",
-    a: "Roughly a half dozen full windshields, depending on how dirty they are. The bottle comes with instructions on how to refill it using common household cleaning products. Refills are available so you're not throwing away the tool every time the fluid runs out.",
+    a: "Roughly a half dozen full windshields, depending on how dirty they are. The bottle comes with instructions on how to refill it using common household cleaning products.",
   },
   {
     q: "Will it fit my roll cage?",
