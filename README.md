@@ -66,10 +66,13 @@ One page, one product, the CTA repeated at intervals rather than a catalog:
 6. **Demo**: before/after comparison slider
 7. **Built for**: vehicle types
 8. **Specs**: dimensions and materials
-9. **Reviews**: social proof
-10. **Buy**: three bundle options
-11. **FAQ**: objection handling
-12. **Final CTA**: closing band
+9. **Buy**: bottle, carrier or bundle (pricing pending)
+10. **FAQ**: objection handling
+11. **Final CTA**: closing band
+
+There is no Reviews section yet: the client has no outside customers.
+Restore one (it was `src/sections/Reviews.astro`, see git history) once there
+are real, attributable quotes.
 
 A sticky buy bar slides up on mobile once the hero scrolls past, and tucks
 itself away over the buy section so two CTAs never compete.
@@ -100,15 +103,22 @@ The page's quality is gated on this more than on anything in the code:
 
 ## Before launch
 
-- [ ] Replace all placeholder copy in `src/data/product.ts`
+Client answers of Nov 4 are already in `src/data/product.ts` (sizes, FAQ,
+email, bottle/carrier/bundle options). Still open:
+
+- [ ] Prices for the three options (cards show "Pricing coming soon")
+- [ ] Formula: undecided, and "just add water" is only a goal. Add formula
+      specs and revisit the freeze-point FAQ once it is settled
+- [ ] Return policy (FAQ currently says it is being finalized)
 - [ ] Supply photography (table above) and drop files in `public/images/`
-- [ ] **Replace the placeholder reviews with real, attributable ones**. Invented
-      testimonials are an FTC problem, not just a credibility one
-- [ ] Confirm pricing, SKUs and the shipping/returns terms
-- [ ] Measure a production unit and confirm every spec figure
-- [ ] Answer the freeze-point FAQ (currently marked TODO)
-- [ ] Connect checkout (see below)
-- [ ] Set the real domain in `astro.config.mjs` (`site`)
+- [ ] Real, attributable customer reviews, then restore the Reviews section
+- [ ] Buy link: selling in local stores and trading posts first, Amazon later.
+      Buy buttons are `mailto:` links until then
+- [ ] Domain: client does not own squeejit.com yet. Update `site` in
+      `astro.config.mjs` and remove the noindex meta when it is live
+- [ ] Social links (none yet), then add them back to the footer
+- [ ] Vector logo: the wordmark is a raster WebP made from the client's PNG, so
+      it won't scale up cleanly. Get or trace an SVG for large print or decals
 - [ ] Add real favicon and OG image
 - [ ] Write and link Privacy, Terms, and Shipping & Returns pages
 
@@ -121,9 +131,9 @@ grep -rn "TODO(" src/
 
 ## Checkout
 
-Not connected. The buy buttons in `src/sections/Buy.astro` are deliberately
-rendered `disabled` with a "checkout not yet connected" note, so the page can
-be shared for review without anyone mistaking it for a live store.
+Not connected. The client is selling through local stores and trading posts
+first, so the buy buttons in `src/sections/Buy.astro` are "Ask about
+availability" `mailto:` links to the contact email, not a cart.
 
 When the client picks a platform:
 

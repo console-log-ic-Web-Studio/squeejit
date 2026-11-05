@@ -2,22 +2,17 @@
  * Every piece of marketing copy on the page lives here, except the menu, which has its own file (nav.ts).
  *
  * This is deliberately the only file a non-developer needs to touch to
- * change wording, pricing, specs or FAQ answers. All copy below is
- * PLACEHOLDER pending client review. See README for the sign-off list.
+ * change wording, pricing, specs or FAQ answers. Facts below (sizes,
+ * materials, FAQ answers) come from the client's notes of Nov 4. Anything
+ * the client hasn't decided yet is marked TODO(client).
  */
 
 export const site = {
   name: "Squeejit",
   tagline: "Off highway vehicle glass window cleaner",
   description:
-    "One bottle. Scrubber, squeegee and cleaner in your hand, so you can clear a mud-blind windshield in under a minute, anywhere the trail takes you.",
-  // TODO(client): confirm before launch
-  email: "hello@squeejit.com",
-  social: {
-    instagram: "https://instagram.com/",
-    youtube: "https://youtube.com/",
-    facebook: "https://facebook.com/",
-  },
+    "A compact bottle with a built-in scrubber and squeegee, plus a carrier that fits any roll cage. Small enough to stash on any machine, so a clean windshield is always within reach.",
+  email: "cghnicholas@gmail.com",
 };
 
 /**
@@ -34,15 +29,17 @@ export const hero = {
   headlinePre: "Mud on,",
   headlineSlash: "mud off.",
   sub:
-    "The trail doesn't come with a car wash. Squeejit puts cleaner, a scrubber and a squeegee in one bottle that rides in your door pocket. A blind windshield costs you sixty seconds, not the rest of the day.",
+    "The trail doesn't come with a car wash. Squeejit puts cleaner, a scrubber and a squeegee in one compact bottle, with a carrier that fits any roll cage. Small enough to stash on any machine, so it's there when the windshield goes blind.",
   primaryCta: "Get yours",
   secondaryCta: "See how it works",
   // Short trust markers under the CTA row
   trust: [
-    "Refillable 10 oz bottle",
-    "Streak-free formula",
-    "Fits any door pocket",
+    "Compact 8 oz bottle",
+    "Refillable",
+    "Carrier fits any roll cage",
   ],
+  // Floating stat card on the product photo
+  stat: { value: "7½ in", label: "Tall. Stows anywhere." },
 };
 
 /** The three-beat line printed on the client's badge logo. */
@@ -68,13 +65,13 @@ export const steps = [
     n: "02",
     title: "Scrub",
     body:
-      "Flip the bottle and work the bonded scrubber pad across the mess. Stiff enough to break dried mud and bug splatter loose, soft enough to leave the glass alone.",
+      "Flip the bottle and work the silicone scrubber across the mess. Firm enough to break dried mud and bug splatter loose, gentle enough on glass.",
   },
   {
     n: "03",
     title: "Squeejit",
     body:
-      "That's the name and the finish. One pass with the integrated blade pulls the slurry off clean. No towel, no streaks, no waiting for it to dry in the sun.",
+      "That's the name and the finish. Pull the squeegee across the glass and the slurry comes off clean. No towel needed.",
   },
 ];
 
@@ -83,30 +80,30 @@ export const anatomy = {
   eyebrow: "Anatomy",
   heading: "Three tools. One hand.",
   body:
-    "Squeejit isn't a bottle with accessories strapped to it. The scrubber and squeegee are part of the body, so nothing rattles loose on a rough trail and nothing gets left behind at camp.",
+    "Squeejit isn't a bottle with accessories strapped to it. The scrubber and squeegee are part of the body, so there's nothing loose to rattle around or leave behind at camp.",
   parts: [
     {
       label: "Twist-top cap",
-      detail: "One-handed open and close, even in gloves. Seals tight against vibration.",
+      detail: "Open and close it with one hand.",
       // Percentage position over the product image. Tune once the real photo lands
       x: 52,
       y: 12,
     },
     {
-      label: "Scrubber pad",
-      detail: "Bonded along the full bottle length. Breaks dried mud without scratching glass.",
+      label: "Silicone scrubber",
+      detail: "100% silicone rubber. Safe on glass, and it breaks dried mud loose.",
       x: 70,
       y: 48,
     },
     {
       label: "Squeegee blade",
-      detail: "Flexible edge that clears the full width of a UTV windshield in one pull.",
+      detail: "Pulls the slurry off the glass in a pass.",
       x: 74,
       y: 72,
     },
     {
-      label: "10 oz refillable body",
-      detail: "Enough for roughly a dozen cleans. Refill it instead of replacing it.",
+      label: "8 oz refillable body",
+      detail: "Roughly a half dozen full windshields per fill. Refill it instead of replacing it.",
       x: 34,
       y: 62,
     },
@@ -115,139 +112,103 @@ export const anatomy = {
 
 export const features = [
   {
-    icon: "bolt",
-    title: "Sixty-second clean",
-    body: "Squirt, scrub, squeegee. No bucket, no hose, no waiting.",
+    icon: "box",
+    title: "Compact",
+    body: "7½ inches tall and 2 inches wide. Small enough to stash almost anywhere on the machine.",
   },
   {
     icon: "hand",
-    title: "One-handed",
-    body: "Works with gloves on, from the driver's seat if you have to.",
+    title: "Fits any roll cage",
+    body: "The carrier has a V-notch in the bottom that fits all roll cages.",
   },
   {
-    icon: "box",
-    title: "Door-pocket sized",
-    body: "Eight inches tall. Lives where a water bottle lives.",
+    icon: "shield",
+    title: "Protected tools",
+    body: "A slot under the carrier shields the squeegee and bristles from mud and tree branches.",
   },
   {
     icon: "drop",
-    title: "Streak-free formula",
-    body: "Ammonia-free, so it's safe on polycarbonate and tinted glass.",
+    title: "All in one",
+    body: "Cleaner, scrubber and squeegee in a single bottle. Squirt it, scrub it, Squeejit.",
   },
   {
     icon: "recycle",
     title: "Refillable",
-    body: "Top it off from a gallon jug. The tool outlasts the fluid.",
+    body: "The bottle comes with instructions to refill it using common household cleaning products.",
   },
   {
-    icon: "shield",
-    title: "Won't scratch",
-    body: "Pad and blade are chosen to lift grit away, not drag it across the glass.",
+    icon: "check",
+    title: "Safe on glass",
+    body: "The scrubber is 100% silicone rubber, made for glass windshields.",
   },
 ];
 
 export const demo = {
   eyebrow: "Proof",
   heading: "Watch it work",
-  body:
-    "Forty seconds, one pass, no towel. Drag the handle to see the difference.",
+  body: "One pass, no towel. Drag the handle to see the difference.",
   beforeLabel: "Before",
   afterLabel: "After",
 };
 
-export const builtFor = [
-  { name: "Side-by-sides", note: "UTV windshields, front and rear" },
-  { name: "ATVs", note: "Headlight lenses and hand guards" },
-  { name: "Dirt bikes", note: "Goggle lenses between motos" },
-  { name: "Trucks & Jeeps", note: "Overlanding, no water to spare" },
-  { name: "Boats", note: "Salt spray on the console glass" },
-  { name: "Snowmobiles", note: "Slush and road film" },
-];
-
-export const specs = [
-  { label: "Capacity", value: "10 fl oz (296 mL)" },
-  { label: "Height", value: '8.25 in (21 cm)' },
-  { label: "Diameter", value: '2.4 in (6.1 cm)' },
-  { label: "Weight, filled", value: "10.5 oz (298 g)" },
-  { label: "Bottle material", value: "HDPE, refillable" },
-  { label: "Scrubber", value: "Bonded polymer bristle pad" },
-  { label: "Squeegee", value: "Flexible TPE blade" },
-  { label: "Formula", value: "Ammonia-free, biodegradable surfactant" },
-  { label: "Safe on", value: "Glass, polycarbonate, acrylic, tint" },
-  { label: "Cleans per fill", value: "~12 windshields" },
-];
-
-export const reviews = {
-  eyebrow: "From the trail",
-  heading: "What riders say",
-  // TODO(client): replace with real, attributable customer reviews before
-  // launch. Fabricated testimonials are both a legal and a trust problem.
+export const builtFor = {
+  eyebrow: "Built for",
+  heading: "Any machine with a glass windshield",
+  body: "Made for glass. Plastic windshields scratch easily, so leave those alone.",
   items: [
-    {
-      quote:
-        "Ran the Rubicon in April with three trucks ahead of me. Cleaned my windshield four times without ever getting out of the seat.",
-      name: "Placeholder Reviewer",
-      location: "Placer County, CA",
-      rating: 5,
-    },
-    {
-      quote:
-        "I kept a spray bottle and a roll of towels in the bed for years. This replaced both and takes up a fraction of the room.",
-      name: "Placeholder Reviewer",
-      location: "St. George, UT",
-      rating: 5,
-    },
-    {
-      quote:
-        "Bought one, then bought three more for the rest of the group. It's the thing everyone borrows at the staging area.",
-      name: "Placeholder Reviewer",
-      location: "Sand Hollow, UT",
-      rating: 5,
-    },
-    {
-      quote:
-        "Took the Squeejit to Moab and it paid for itself on day one.",
-      name: "Jordan M.",
-      location: "Moab, UT",
-      rating: 5,
-    },
+    { name: "Side-by-sides", note: "UTV glass windshields, front and rear" },
+    { name: "Trucks & Jeeps", note: "Overlanding, no water to spare" },
+    { name: "Boats", note: "Salt spray on the console glass" },
   ],
 };
+
+export const specs = [
+  { label: "Bottle capacity", value: "8 fl oz" },
+  { label: "Bottle size", value: '7½" H × 2" W × 2⅜" D' },
+  { label: "Carrier size", value: '5½" L × 2⅜" W × 3" H' },
+  { label: "Carrier fit", value: "V-notch fits all roll cages" },
+  { label: "Scrubber", value: "100% silicone rubber" },
+  { label: "Safe on", value: "Glass windshields" },
+  { label: "Not for", value: "Plastic windshields (polycarbonate, acrylic)" },
+  { label: "Cleans per fill", value: "Roughly a half dozen full windshields" },
+];
 
 export const buy = {
   eyebrow: "Get one",
   heading: "Pick your setup",
-  note: "Free shipping on orders over $50. 30-day money-back guarantee.",
-  // TODO(client): confirm final pricing and SKU names
+  note: "Pricing is still being finalized. We're starting out in local stores and trading posts, so email us to ask where to find one.",
+  // TODO(client): add prices once decided. A price renders big on the card;
+  // leave it null to show "Pricing coming soon".
   options: [
     {
-      id: "single",
-      name: "Single",
-      blurb: "One bottle, filled and ready.",
-      price: "$27",
-      compareAt: null,
-      badge: null,
-      includes: ["1x Squeejit, filled", "10 oz cleaner"],
+      id: "bottle",
+      name: "Bottle",
+      blurb: "The Squeejit on its own.",
+      price: null as string | null,
+      badge: null as string | null,
+      includes: ["1x Squeejit bottle, 8 oz", "Built-in scrubber and squeegee", "Refill instructions"],
       featured: false,
     },
     {
-      id: "double",
-      name: "Trail Pack",
-      blurb: "One for the rig, one for the chase truck.",
-      price: "$44",
-      compareAt: "$48",
-      badge: "Most popular",
-      includes: ["2x Squeejit, filled", "20 oz cleaner total", "Free shipping"],
+      id: "bundle",
+      name: "Bottle + Carrier",
+      blurb: "The whole setup, ready to mount.",
+      price: null as string | null,
+      badge: "Bundle",
+      includes: [
+        "1x Squeejit bottle, 8 oz",
+        "1x roll cage carrier",
+        "Slot protects squeegee and bristles",
+      ],
       featured: true,
     },
     {
-      id: "refill",
-      name: "Refill Kit",
-      blurb: "For riders who already have the tool.",
-      price: "$32",
-      compareAt: null,
-      badge: null,
-      includes: ["1x Squeejit, filled", "1 gallon refill concentrate"],
+      id: "carrier",
+      name: "Carrier",
+      blurb: "For riders who already have the bottle.",
+      price: null as string | null,
+      badge: null as string | null,
+      includes: ["1x carrier", "V-notch fits all roll cages", "Slot protects squeegee and bristles"],
       featured: false,
     },
   ],
@@ -256,37 +217,33 @@ export const buy = {
 export const faq = [
   {
     q: "Will the scrubber scratch my windshield?",
-    a: "No. The pad is chosen to lift grit off the surface rather than drag it across, and the formula floats debris away as you work. It's safe on glass, polycarbonate, acrylic and factory tint. As with any cleaning tool, knock off loose gravel before you scrub.",
+    a: "No. The scrubber is made of 100% silicone rubber and is safe on glass. As with any cleaning tool, knock off loose gravel before you scrub.",
   },
   {
     q: "Can I use it on a plastic windshield?",
-    a: "Yes. The formula is ammonia-free, which is what causes clouding and crazing on polycarbonate over time. That's the main reason household glass cleaner is a bad idea on a UTV windshield.",
+    a: "No. Squeejit is intended for glass windshields. Plastic windshields are typically polycarbonate (like Lexan) or acrylic (like Plexiglas), and they scratch easily from tiny particles of sand, road dust or grit that can get trapped under the scrubber or squeegee.",
   },
   {
     q: "How many cleanings do I get per bottle?",
-    a: "Roughly a dozen full windshields, depending on how bad the mud is. Refills are available so you're not throwing away the tool every time the fluid runs out.",
+    a: "Roughly a half dozen full windshields, depending on how dirty they are. The bottle comes with instructions on how to refill it using common household cleaning products.",
   },
   {
-    q: "Does it work on dried-on mud?",
-    a: "Yes, that's what the scrubber is for. Lay down cleaner, let it sit for fifteen seconds to soften the crust, then scrub and squeegee.",
+    q: "Will it fit my roll cage?",
+    a: "Yes. The carrier has a V-notch in the bottom that fits all roll cages. A slot underneath protects the squeegee and bristles from mud and tree branches.",
   },
   {
     q: "Will it freeze in the winter?",
-    a: "The formula stays liquid down to 15°F (-9°C).",
+    a: "The formula is mostly water and stays liquid down to 32°F (0°C).",
   },
   {
     q: "What's your return policy?",
-    a: "Thirty days. If it doesn't earn its spot in your door pocket, send it back for a full refund.",
-  },
-  {
-    q: "Does it work on ceramic-coated glass?",
-    a: "Yes. The formula is safe on ceramic coatings.",
+    a: "We're still finalizing it. Email us and we'll answer any questions before you buy.",
   },
 ];
 
 export const finalCta = {
   heading: "Stop driving blind",
   body:
-    "One bottle in the door pocket is the difference between turning around and finishing the ride.",
+    "One compact bottle, stashed on the machine, is the difference between turning around and finishing the ride.",
   cta: "Get your Squeejit",
 };

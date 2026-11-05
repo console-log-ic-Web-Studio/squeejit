@@ -13,6 +13,7 @@ Expected files (see the root README for art direction on each):
 - `scale.jpg`: bottle beside a size reference
 - `og.jpg`: 1200x630 social sharing card (currently the client badge on gunmetal)
 - `logo-badge.webp`: client-supplied badge logo (transparent corners)
+- `logo-wordmark.webp`: SQUEEJIT wordmark (horizontal) for the header and footer
 - `trail-scene.webp`: UTV-in-water illustration cropped from the badge
 
 Export at roughly 2x the displayed size and compress. WebP is preferred where

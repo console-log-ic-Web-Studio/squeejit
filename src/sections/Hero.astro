@@ -86,9 +86,9 @@ import { hero, motto } from "../data/product";
       <div
         class="absolute -bottom-6 left-0 border border-ink-700 bg-ink-900/95 px-5 py-4 shadow-[var(--shadow-lift)] backdrop-blur sm:left-8"
       >
-        <p class="font-display text-4xl leading-none text-brand-400">60s</p>
+        <p class="font-display text-4xl leading-none text-brand-400">{hero.stat.value}</p>
         <p class="mt-1 text-xs uppercase tracking-[0.18em] text-steel-400">
-          Clear windshield
+          {hero.stat.label}
         </p>
       </div>
     </div>
