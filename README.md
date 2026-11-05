@@ -117,8 +117,8 @@ email, bottle/carrier/bundle options). Still open:
 - [ ] Domain: client does not own squeejit.com yet. Update `site` in
       `astro.config.mjs` and remove the noindex meta when it is live
 - [ ] Social links (none yet), then add them back to the footer
-- [ ] Final label font: the wordmark uses Exo 2 Black Italic as a stand-in.
-      Swap in the exact font or a logo SVG if the designer can supply one
+- [ ] Vector logo: the wordmark is a raster WebP made from the client's PNG, so
+      it won't scale up cleanly. Get or trace an SVG for large print or decals
 - [ ] Add real favicon and OG image
 - [ ] Write and link Privacy, Terms, and Shipping & Returns pages
 

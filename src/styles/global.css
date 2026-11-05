@@ -8,8 +8,6 @@
 @theme {
   /* Fonts */
   --font-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
-  /* Closest free match to the lettering on the badge and bottle label. */
-  --font-wordmark: "Exo 2", "Arial Black", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* Base: gunmetal, not pure black. Pure black reads flat on phones. */
