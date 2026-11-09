@@ -115,7 +115,12 @@ email, bottle/carrier/bundle options). Still open:
 - [ ] Buy link: selling in local stores and trading posts first, Amazon later.
       Buy buttons are `mailto:` links until then
 - [ ] Domain: client does not own squeejit.com yet. Update `site` in
-      `astro.config.mjs` and remove the noindex meta when it is live
+      `astro.config.mjs` once it is live
+- [ ] **Remove noindex (last step, easy to forget):** delete the
+      `<meta name="robots" content="noindex, nofollow" />` line and the
+      "Preview only" comment above it in `src/layouts/BaseLayout.astro`. While
+      it is there, search engines skip the site entirely. After deploying,
+      confirm with view-source on squeejit.com that the tag is gone
 - [ ] Social links (none yet), then add them back to the footer
 - [ ] Vector logo: the wordmark is a raster WebP made from the client's PNG, so
       it won't scale up cleanly. Get or trace an SVG for large print or decals
