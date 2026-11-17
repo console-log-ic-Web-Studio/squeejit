@@ -114,9 +114,10 @@ email, bottle/carrier/bundle options). Still open:
 - [ ] Real, attributable customer reviews, then restore the Reviews section
 - [ ] Buy link: selling in local stores and trading posts first, Amazon later.
       Buy buttons are `mailto:` links until then
-- [ ] Domain: the client chose getsqueejit.com, and `site` in
-      `astro.config.mjs` is already set to it. Register it and point it at
-      Netlify; canonical URLs and the sitemap won't resolve until then
+- [ ] Domain: getsqueejit.com (registered by the client, GoDaddy access
+      obtained). `site` in `astro.config.mjs` is already set to it. Still to
+      do: add the domain in Netlify, point GoDaddy DNS at it, and confirm
+      HTTPS is issued. Canonical URLs and the sitemap won't resolve until then
 - [ ] **Remove noindex (last step, easy to forget):** delete the
       `<meta name="robots" content="noindex, nofollow" />` line and the
       "Preview only" comment above it in `src/layouts/BaseLayout.astro`. While
