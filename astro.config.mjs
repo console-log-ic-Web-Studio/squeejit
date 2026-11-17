@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // TODO: set this to the production domain before launch so canonical URLs
   // and the sitemap resolve correctly.
-  site: 'https://squeejit.com',
+  site: 'https://getsqueejit.com',
   vite: {
     plugins: [tailwindcss()],
   },
