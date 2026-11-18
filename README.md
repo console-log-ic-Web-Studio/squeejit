@@ -114,13 +114,15 @@ email, bottle/carrier/bundle options). Still open:
 - [ ] Real, attributable customer reviews, then restore the Reviews section
 - [ ] Buy link: selling in local stores and trading posts first, Amazon later.
       Buy buttons are `mailto:` links until then
-- [ ] Domain: client does not own squeejit.com yet. Update `site` in
-      `astro.config.mjs` once it is live
+- [ ] Domain: getsqueejit.com (registered by the client, GoDaddy access
+      obtained). `site` in `astro.config.mjs` is already set to it. Still to
+      do: add the domain in Netlify, point GoDaddy DNS at it, and confirm
+      HTTPS is issued. Canonical URLs and the sitemap won't resolve until then
 - [ ] **Remove noindex (last step, easy to forget):** delete the
       `<meta name="robots" content="noindex, nofollow" />` line and the
       "Preview only" comment above it in `src/layouts/BaseLayout.astro`. While
       it is there, search engines skip the site entirely. After deploying,
-      confirm with view-source on squeejit.com that the tag is gone
+      confirm with view-source on getsqueejit.com that the tag is gone
 - [ ] Social links (none yet), then add them back to the footer
 - [ ] Vector logo: the wordmark is a raster WebP made from the client's PNG, so
       it won't scale up cleanly. Get or trace an SVG for large print or decals

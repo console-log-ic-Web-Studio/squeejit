@@ -4,9 +4,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: set this to the production domain before launch so canonical URLs
-  // and the sitemap resolve correctly.
-  site: 'https://squeejit.com',
+  // The domain the client chose. Canonical URLs, the social image, the
+  // sitemap and robots.txt are all built from this, so they resolve once
+  // getsqueejit.com is registered and pointed at Netlify.
+  site: 'https://getsqueejit.com',
   vite: {
     plugins: [tailwindcss()],
   },
