@@ -65,18 +65,28 @@ export const steps = [
     title: "Squirt",
     body:
       "Flip the cap and lay a line of cleaner across the glass. The twist-top puts it exactly where you want it. No wind-blown spray, no wasted product.",
+    image: {
+      src: "/images/step-squirt.webp",
+      alt: "A gloved hand squirting a line of cleaner across a muddy UTV windshield",
+    },
   },
   {
     n: "02",
     title: "Scrub",
     body:
       "Flip the bottle and work the silicone scrubber across the mess. Firm enough to break dried mud and bug splatter loose, gentle enough on glass.",
+    // TODO(client): "Tight action scrub" photo still to come.
+    image: null,
   },
   {
     n: "03",
     title: "Squeejit",
     body:
       "That's the name and the finish. Pull the squeegee across the glass and the slurry comes off clean. No towel needed.",
+    image: {
+      src: "/images/step-squeegee.webp",
+      alt: "A gloved hand pulling the Squeejit squeegee across a muddy UTV windshield",
+    },
   },
 ];
 
