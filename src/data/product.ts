@@ -75,8 +75,10 @@ export const steps = [
     title: "Scrub",
     body:
       "Flip the bottle and work the silicone scrubber across the mess. Firm enough to break dried mud and bug splatter loose, gentle enough on glass.",
-    // TODO(client): "Tight action scrub" photo still to come.
-    image: null,
+    image: {
+      src: "/images/step-scrub.webp",
+      alt: "A gloved hand scrubbing mud off a UTV windshield with the Squeejit bottle",
+    },
   },
   {
     n: "03",
