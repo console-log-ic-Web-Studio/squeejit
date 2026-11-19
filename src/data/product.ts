@@ -102,26 +102,26 @@ export const anatomy = {
     {
       label: "Twist-top cap",
       detail: "Open and close it with one hand.",
-      // Percentage position over the product image. Tune once the real photo lands
-      x: 52,
-      y: 12,
+      // Percentage position over the product image (anatomy-bottle.webp)
+      x: 50,
+      y: 22,
     },
     {
       label: "Silicone scrubber",
       detail: "100% silicone rubber. Safe on glass, and it breaks dried mud loose.",
-      x: 70,
-      y: 48,
+      x: 48.5,
+      y: 45,
     },
     {
       label: "Squeegee blade",
       detail: "Pulls the slurry off the glass in a pass.",
-      x: 74,
-      y: 72,
+      x: 60.5,
+      y: 66,
     },
     {
       label: "8 oz refillable body",
       detail: "Roughly a half dozen full windshields per fill. Refill it instead of replacing it.",
-      x: 34,
+      x: 37.8,
       y: 62,
     },
   ],
