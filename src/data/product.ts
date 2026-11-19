@@ -165,7 +165,16 @@ export const carrier = {
 export const demo = {
   eyebrow: "Proof",
   heading: "Watch it work",
-  body: "One pass, no towel. Drag the handle to see the difference.",
+  body: "One pass, no towel.",
+  /**
+   * The client's before/after arrived as one side-by-side photo, so it shows
+   * as a single image. Set this to null to bring back the drag slider once
+   * there are two matching shots (before.jpg and after.jpg).
+   */
+  composite: {
+    src: "/images/before-after.webp",
+    alt: "A muddy UTV windshield, the left half still caked with mud and the right half wiped clean with Squeejit",
+  } as { src: string; alt: string } | null,
   beforeLabel: "Before",
   afterLabel: "After",
 };
@@ -202,8 +211,8 @@ export const buy = {
       blurb: "The Squeejit on its own.",
       price: "$14.99" as string | null,
       image: {
-        src: undefined as string | undefined,
-        alt: "The Squeejit bottle on its own",
+        src: "/images/buy-bottle.webp" as string | undefined,
+        alt: "The Squeejit bottle, front and back, showing the built-in scrubber",
         note: "PRODUCT CUTOUT. The bottle alone on a clean background.",
       },
       badge: null as string | null,
@@ -216,7 +225,7 @@ export const buy = {
       blurb: "The whole setup, ready to mount.",
       price: "$24.99" as string | null,
       image: {
-        src: undefined as string | undefined,
+        src: "/images/buy-bundle.webp" as string | undefined,
         alt: "The Squeejit bottle seated in its roll cage carrier",
         note: "BOTTLE IN CARRIER. Front view of the bottle seated in the carrier.",
       },
@@ -235,7 +244,7 @@ export const buy = {
       blurb: "For riders who already have the bottle.",
       price: "$12.99" as string | null,
       image: {
-        src: undefined as string | undefined,
+        src: "/images/buy-carrier.webp" as string | undefined,
         alt: "The empty Squeejit roll cage carrier",
         note: "CARRIER. The carrier on its own, V-notch visible.",
       },

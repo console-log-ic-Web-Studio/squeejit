@@ -13,6 +13,20 @@ import { demo } from "../data/product";
       align="center"
     />
 
+    {demo.composite ? (
+      <figure class="reveal mx-auto mt-14 max-w-4xl border border-ink-700">
+        <img
+          src={demo.composite.src}
+          alt={demo.composite.alt}
+          width="960"
+          height="649"
+          loading="lazy"
+          decoding="async"
+          class="h-auto w-full"
+        />
+      </figure>
+    ) : (
+    <Fragment>
     <!--
       Before/after comparison. The "after" image sits underneath; the
       "before" image on top is clipped by a CSS variable the range input
@@ -89,6 +103,8 @@ import { demo } from "../data/product";
       <!-- TODO(client): if a demo video exists, swap this comparison for it.
            Video converts better than a static before/after. -->
     </figcaption>
+    </Fragment>
+    )}
   </div>
 </section>
 
