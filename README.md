@@ -66,9 +66,10 @@ One page, one product, the CTA repeated at intervals rather than a catalog:
 6. **Demo**: before/after comparison slider
 7. **Built for**: vehicle types
 8. **Specs**: dimensions and materials
-9. **Buy**: bottle, carrier or bundle (pricing pending)
-10. **FAQ**: objection handling
-11. **Final CTA**: closing band
+9. **Carrier**: the roll cage carrier on its own
+10. **Buy**: bottle, carrier or bundle, with a photo on each card
+11. **FAQ**: objection handling
+12. **Final CTA**: closing band
 
 There is no Reviews section yet: the client has no outside customers.
 Restore one (it was `src/sections/Reviews.astro`, see git history) once there
@@ -106,10 +107,12 @@ The page's quality is gated on this more than on anything in the code:
 Client answers of Nov 4 are already in `src/data/product.ts` (sizes, FAQ,
 email, bottle/carrier/bundle options). Still open:
 
-- [ ] Prices for the three options (cards show "Pricing coming soon")
+- [x] Prices for the three options (client, Nov 19)
 - [ ] Formula: undecided, and "just add water" is only a goal. Add formula
       specs and revisit the freeze-point FAQ once it is settled
-- [ ] Return policy (FAQ currently says it is being finalized)
+- [x] Return policy: 30-day returns (client, Nov 19)
+- [ ] Contact email: client asked for "the Squeejit email address", not yet
+      shared. Footer and buy buttons still use the personal address
 - [ ] Supply photography (table above) and drop files in `public/images/`
 - [ ] Real, attributable customer reviews, then restore the Reviews section
 - [ ] Buy link: selling in local stores and trading posts first, Amazon later.

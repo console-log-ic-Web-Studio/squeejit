@@ -40,8 +40,9 @@ import { steps } from "../data/product";
             </span>
 
             <ImageSlot
+              src={step.image?.src}
               ratio="4 / 3"
-              alt={`${step.title}, step ${step.n}`}
+              alt={step.image?.alt ?? `${step.title}, step ${step.n}`}
               note={`STEP ${step.n}. Tight action shot of the "${step.title.toLowerCase()}" motion. Same rig, same light across all three so they read as a sequence.`}
               class="border-0 border-b-2"
             />

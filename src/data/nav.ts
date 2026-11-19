@@ -6,5 +6,6 @@ export const nav = [
   { label: "How it works", href: "#how-it-works" },
   { label: "Features", href: "#features" },
   { label: "Specs", href: "#specs" },
+  { label: "Carrier", href: "#carrier" },
   { label: "FAQ", href: "#faq" },
 ];

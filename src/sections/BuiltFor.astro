@@ -15,7 +15,14 @@ import { builtFor } from "../data/product";
       align="center"
     />
 
-    <ul class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <ul
+      class:list={[
+        "mt-14 grid gap-4",
+        builtFor.items.length === 1
+          ? "mx-auto max-w-md"
+          : "sm:grid-cols-2 lg:grid-cols-3",
+      ]}
+    >
       {
         builtFor.items.map((item, i) => (
           <li
