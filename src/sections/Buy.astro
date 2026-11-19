@@ -1,6 +1,7 @@
 ---
 import SectionHeading from "../components/SectionHeading.astro";
 import Icon from "../components/Icon.astro";
+import ImageSlot from "../components/ImageSlot.astro";
 import { buy, site } from "../data/product";
 ---
 
@@ -26,10 +27,19 @@ import { buy, site } from "../data/product";
             style={`transition-delay: ${i * 80}ms`}
           >
             {option.badge && (
-              <span class="absolute -top-3 left-8 bg-splash-50 px-3 py-1 font-display text-xs font-bold uppercase tracking-[0.16em] text-ink-950">
+              <span class="absolute -top-3 left-8 z-10 bg-splash-50 px-3 py-1 font-display text-xs font-bold uppercase tracking-[0.16em] text-ink-950">
                 {option.badge}
               </span>
             )}
+
+            <div class="-mx-8 -mt-8 mb-6">
+              <ImageSlot
+                src={option.image.src}
+                alt={option.image.alt}
+                note={option.image.note}
+                ratio="4 / 3"
+              />
+            </div>
 
             <h3 class="text-3xl text-white">{option.name}</h3>
             <p class="mt-1.5 text-steel-400">{option.blurb}</p>
@@ -56,8 +66,8 @@ import { buy, site } from "../data/product";
             </ul>
 
             {/*
-              No online checkout yet: the plan is local stores and trading
-              posts first, Amazon later. Until then this is a mailto link.
+              No online checkout yet. The client may sell through Amazon and
+              Facebook; until there is a listing link, this is a mailto link.
               TODO(commerce): swap for the real buy link once one exists.
             */}
             <a
