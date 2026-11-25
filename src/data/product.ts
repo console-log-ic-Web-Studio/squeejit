@@ -12,9 +12,10 @@ export const site = {
   tagline: "Off highway vehicle glass window cleaner",
   description:
     "A compact bottle with a built-in scrubber and squeegee, plus a carrier that fits any roll cage. Small enough to stash on any machine, so a clean windshield is always within reach.",
-  // Client's Squeejit address (Ginger, Nov 24). Make sure the mailbox exists
-  // on getsqueejit.com before launch.
-  email: "info@getsqueejit.com",
+  // TEMPORARY: the clients' Gmail, until the info@getsqueejit.com mailbox
+  // (Ginger, Nov 24) is set up in Google Workspace. Swap back to
+  // "info@getsqueejit.com" once that mailbox receives mail.
+  email: "cghnicholas@gmail.com",
   phone: "720-225-7474",
   /** Same number in E.164 form for tel: links. */
   phoneHref: "+17202257474",
