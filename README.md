@@ -111,9 +111,9 @@ email, bottle/carrier/bundle options). Still open:
 - [ ] Formula: undecided, and "just add water" is only a goal. Add formula
       specs and revisit the freeze-point FAQ once it is settled
 - [x] Return policy: 30-day returns (client, Nov 19)
-- [ ] Contact email: client asked for "the Squeejit email address", not yet
-      shared. Footer and buy buttons still use the personal address
-- [ ] Supply photography (table above) and drop files in `public/images/`
+- [x] Contact email: info@getsqueejit.com (client, Nov 24). Footer and buy
+      buttons use it; confirm the mailbox is set up before launch
+- [x] Supply photography (table above) and drop files in `public/images/`
 - [ ] Real, attributable customer reviews, then restore the Reviews section
 - [ ] Buy link: selling in local stores and trading posts first, Amazon later.
       Buy buttons are `mailto:` links until then
