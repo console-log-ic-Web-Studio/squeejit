@@ -1,0 +1,58 @@
+---
+import SectionHeading from "../components/SectionHeading.astro";
+import ImageSlot from "../components/ImageSlot.astro";
+import Icon from "../components/Icon.astro";
+import { carrier } from "../data/product";
+---
+
+<section id="carrier" class="relative overflow-hidden bg-ink-950 py-20 lg:py-28">
+  <div class="texture-topo absolute inset-0 opacity-40"></div>
+
+  <div class="shell relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <div class="reveal flex flex-col gap-4">
+      <ImageSlot
+        src="/images/carrier-on-machine.webp"
+        ratio="4 / 3"
+        alt="The Squeejit carrier strapped to a UTV roll cage with the bottle seated in it"
+        note="CARRIER ON MACHINE. The carrier strapped to a roll cage, bottle in place."
+      />
+
+      <div class="grid grid-cols-2 gap-4">
+        <ImageSlot
+          src="/images/carrier-side.webp"
+          ratio="1 / 1"
+          alt="The Squeejit bottle seated in the carrier, seen from the side"
+          note="BOTTLE IN CARRIER, side view."
+        />
+        <ImageSlot
+          src="/images/carrier-back.webp"
+          ratio="1 / 1"
+          alt="The Squeejit carrier on its own, showing the strap slots"
+          note="CARRIER BACK. V-notch and strap slot visible."
+        />
+      </div>
+    </div>
+
+    <div>
+      <SectionHeading eyebrow={carrier.eyebrow} heading={carrier.heading} body={carrier.body} />
+
+      <ul class="reveal mt-8 flex flex-col gap-3">
+        {
+          carrier.points.map((point) => (
+            <li class="flex items-start gap-2.5 text-steel-300">
+              <Icon name="check" class="mt-1 h-4 w-4 shrink-0 text-brand-400" />
+              <span>{point}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <a
+        href="#buy"
+        class="reveal mt-10 inline-block border-2 border-ink-600 px-6 py-3 font-display text-base font-bold uppercase tracking-wider text-steel-200 transition hover:border-brand-500 hover:text-white"
+      >
+        See setups and prices
+      </a>
+    </div>
+  </div>
+</section>
