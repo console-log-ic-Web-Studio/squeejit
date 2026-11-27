@@ -26,7 +26,7 @@ export const site = {
  * here to turn the credit into a link.
  */
 export const credit = {
-  url: "",
+  url: "https://consolelogic.net",
 };
 
 export const hero = {

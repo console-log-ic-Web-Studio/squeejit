@@ -65,14 +65,16 @@ const year = new Date().getFullYear();
         in brand blue so the console.log / logic pun lands visually.
       */}
       <p class="text-steel-500">
-        Built by{" "}
+        Crafted by{" "}
         {credit.url ? (
           <a
             href={credit.url}
+            target="_blank"
             rel="noopener"
-            class="font-mono text-steel-300 transition-colors hover:text-brand-400"
+            class="font-mono text-steel-300 underline-offset-4 transition-colors hover:text-brand-400 hover:underline"
           >
             console.log(<span class="text-brand-400">ic</span>)
+            <span class="sr-only"> (opens in a new tab)</span>
           </a>
         ) : (
           <span class="font-mono text-steel-300">
